@@ -9,5 +9,5 @@ To run:
 ```bash
 source ~/catkin_ws/src/devel/setup.bash # .zsh if your using a ZSH
 roslaunch turtlebot_gazebo turtlebot_world.launch # starts Gazebo with turtlebot
-rosrun package_name main.py # starts this rosnode
+rosrun package_name p1.py # starts this rosnode
 ```
