@@ -1,5 +1,5 @@
 # ua_mobile_robots
-Hostings assignments made at the UA with ROS
+Hostings assignments made at UA with ROS
 
 ## Assignment 1
 Obstacle avoidance algorithm.
