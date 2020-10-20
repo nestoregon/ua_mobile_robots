@@ -10,7 +10,7 @@ source ~/catkin_ws/src/devel/setup.bash # .zsh if your using a ZSH
 roslaunch turtlebot_gazebo turtlebot_world.launch # starts Gazebo with turtlebot
 rosrun package_name main.py # starts this rosnode
 
-**Note that the minimum range of the lidar in Gazebo is 0.5 meters
+**Note that the range of the lidar is
 """
 
 # imports
@@ -25,8 +25,9 @@ from sensor_msgs.msg import LaserScan
 # avoid values lower than 0.5 for MIN_BUMP_DISTANCE
 
 MIN_BUMP_DISTANCE = 0.6 # min value to turn
-LINEAR_SPEED = 0.2      # linear speed
+LINEAR_SPEED = 0.5      # linear speed
 ANGULAR_SPEED = 0.4     # angular speed
+RATE = 10               # rate of the robot
 
 # class
 class RobotClass():
@@ -40,7 +41,7 @@ class RobotClass():
         self.state = "stop"
         self.sub_scan = rospy.Subscriber("/scan", LaserScan, self.callback_laser) # subscribe to
         self.pub_cmd = rospy.Publisher("/mobile_base/commands/velocity", Twist, queue_size=5) # publish to
-        self.rate = rospy.Rate(1) # 0.1 seconds sleep
+        self.rate = rospy.Rate(RATE) # 0.1 seconds sleep
         self.laser_right = 0
         self.laser_left = 0
         self.laser_front = 0
