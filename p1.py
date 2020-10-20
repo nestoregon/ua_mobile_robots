@@ -25,9 +25,13 @@ from sensor_msgs.msg import LaserScan
 # avoid values lower than 0.5 for MIN_BUMP_DISTANCE
 
 MIN_BUMP_DISTANCE = 0.6 # min value to turn
-LINEAR_SPEED = 0.5      # linear speed
 ANGULAR_SPEED = 0.4     # angular speed
 RATE = 10               # rate of the robot
+
+# note the different speeds required for the different simulations.
+LINEAR_SPEED = 0.5      # linear speed STAGE
+# LINEAR_SPEED = 0.2      # linear speed GAZEBO
+
 
 # class
 class RobotClass():
