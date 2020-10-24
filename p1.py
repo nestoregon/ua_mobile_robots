@@ -57,8 +57,8 @@ class RobotClass():
         Gets the minimum value in each range and saves it in a class variable.
         Later those varibles are checked to decide the action of the robot
         """
-        max_range = msg.angle_max 
-        min_range = msg.angle_min 
+        max_range = msg.angle_max
+        min_range = msg.angle_min
         self.scan = np.array(msg.ranges) # get array of ranges of the laser
 
         where_are_NaNs = np.isnan(self.scan) # make nans 0
@@ -141,7 +141,7 @@ class RobotClass():
                 self.vel_left()
             elif self.state == "backwards":
                 self.vel_backwards()
-         
+
             # sleep
             self.rate.sleep()
 
