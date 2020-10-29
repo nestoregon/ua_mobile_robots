@@ -7,7 +7,7 @@ Tested successfully in Gazebo 7.4 and ROS kinetic.
 
 Requirements:
 - Gazebo 7.4 and ROS kinetic or higher. Keep in mind that turtlebot packages change in higher versions and the scaner might not work as intended.
-- Make the file executable with ```chmod +x p1.py```. It should look green when running the command ``ls`` on the terminal.
+- Make the file executable with ``chmod +x p1.py``. It should look green when running the command ``ls`` on the terminal.
 
 Run on Gazebo
 ```bash
